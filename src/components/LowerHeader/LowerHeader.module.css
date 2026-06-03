@@ -1,0 +1,65 @@
+/* Amazon-style lower header */
+.nav {
+  background-color: #232f3e;
+  color: #ffffff;
+  padding: 0 15px;
+  font-family: "Amazon Ember", Arial, sans-serif;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 39px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  transition: all 0.1s ease;
+}
+
+.item a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.item:hover {
+  border-color: #ffffff;
+}
+
+.all {
+  font-weight: 700;
+}
+
+.icon {
+  font-size: 18px;
+  margin-right: 4px;
+}
+
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+.list {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+@media (max-width: 600px) {
+  .item {
+    padding: 8px 6px;
+    font-size: 13px;
+  }
+}
