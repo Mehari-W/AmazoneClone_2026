@@ -1,16 +1,13 @@
-import CarouselEffect from "./components/CarouselEffect/CarouselEffect";
-import Category from "./components/Category/Category";
+import { BrowserRouter } from "react-router-dom";
 import Header from "./components/Header/Header";
-import Product from "./components/Products/Product";
+import Router from "./Router";
 
 const App = () => {
   return (
-    <>
+    <BrowserRouter>
       <Header />
-      <CarouselEffect />
-      <Category />
-      <Product />
-    </>
+      <Router />
+    </BrowserRouter>
   );
 };
 

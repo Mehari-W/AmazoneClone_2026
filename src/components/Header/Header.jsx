@@ -1,28 +1,24 @@
 import { FaSearch } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
 import { BiCart } from "react-icons/bi";
-import styles from "./Header.module.css";
+import { Link } from "react-router-dom";
 import LowerHeader from "../LowerHeader/LowerHeader";
+import styles from "./Header.module.css";
 
 const Header = () => {
-
   return (
     <>
-      {" "}
-      <section className={styles.headerBackground}>
+      <header className={styles.headerBackground}>
         <div className={styles.headerContainer}>
-          {/* ── LEFT SIDE ── */}
+          {/* LEFT SIDE */}
           <div className={styles.leftSide}>
-            {/* Logo */}
-            <a href="#" className={styles.logoLink}>
+            <Link to="/" className={styles.logoLink}>
               <img
                 className={styles.logoImage}
                 src="https://pngimg.com/uploads/amazon/small/amazon_PNG11.png"
                 alt="Amazon logo"
               />
-            </a>
-
-            {/* Delivery location */}
+            </Link>
             <span className={styles.locationIcon}>
               <IoLocationOutline />
             </span>
@@ -32,7 +28,7 @@ const Header = () => {
             </div>
           </div>
 
-          {/* ── SEARCH BAR ── */}
+          {/* SEARCH BAR */}
           <div className={styles.searchSide}>
             <select className={styles.searchSelect} name="category">
               <option value="all">All</option>
@@ -47,9 +43,8 @@ const Header = () => {
             </button>
           </div>
 
-          {/* ── RIGHT SIDE ── */}
+          {/* RIGHT SIDE */}
           <div className={styles.rightSide}>
-            {/* Language */}
             <img
               className={styles.flagImage}
               src="https://cdn-icons-png.flaticon.com/128/206/206626.png"
@@ -59,26 +54,23 @@ const Header = () => {
               <option value="en">EN</option>
             </select>
 
-            {/* Account & Lists */}
-            <a href="#" className={styles.navLink}>
+            <Link to="/auth" className={styles.navLink}>
               <p>Hello, Sign in</p>
               <span>Account & Lists</span>
-            </a>
+            </Link>
 
-            {/* Returns & Orders */}
-            <a href="#" className={styles.navLink}>
+            <Link to="/orders" className={styles.navLink}>
               <p>Returns</p>
               <span>& Orders</span>
-            </a>
+            </Link>
 
-            {/* Cart */}
-            <a href="#" className={styles.navLink}>
+            <Link to="/cart" className={styles.navLink}>
               <BiCart />
               <span>0</span>
-            </a>
+            </Link>
           </div>
         </div>
-      </section>
+      </header>
       <LowerHeader />
     </>
   );
