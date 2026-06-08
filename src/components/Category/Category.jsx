@@ -2,8 +2,8 @@ import { categoryInfo } from "./categoryFullInfos";
 import CategoryCard from "./CategoryCard";
 
 import styles from "./Category.module.css";
-function Category() {
-  return (
+const Category = () => {
+   return (
     <>
       <section className={styles.category__container}>
         {categoryInfo.map((infos, index) => {
@@ -14,4 +14,4 @@ function Category() {
   );
 }
 
-export default Category; 
+export default Category
