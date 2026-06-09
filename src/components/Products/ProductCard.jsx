@@ -3,11 +3,11 @@ import CurrencyFormat from "../CurrencyFormat/CurrencyFormat";
 import styles from './Product.module.css';
 import {Link} from "react-router-dom";
 const ProductCard = ({product}) => {
-  const { image, title, rating, price } = product ;
+  const {id, image, title, rating, price } = product ;
   return (
     <>
     <div className={styles.product_card}>
-      <Link to='#'>
+      <Link to={`/products/${id}`}>
         <img src={image} alt={title} />
       </Link>
       
