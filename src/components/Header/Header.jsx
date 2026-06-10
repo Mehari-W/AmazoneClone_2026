@@ -4,8 +4,13 @@ import { BiCart } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import LowerHeader from "../LowerHeader/LowerHeader";
 import styles from "./Header.module.css";
+import { useContext } from "react";
+import { DataContext } from "../DataProvider/DataProvider";
 
 const Header = () => {
+  const [state] = useContext(DataContext);   
+  // console.log(state.basket.length);                 
+
   return (
     <>
       <header className={styles.headerBackground}>
@@ -66,7 +71,7 @@ const Header = () => {
 
             <Link to="/cart" className={styles.navLink}>
               <BiCart />
-              <span>0</span>
+              <span>{state.basket.length}</span>   
             </Link>
           </div>
         </div>
